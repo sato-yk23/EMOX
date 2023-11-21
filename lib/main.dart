@@ -67,9 +67,10 @@ class FigmaToCodeApp extends StatelessWidget {
   }
 
   void toggleMusic() {
-    if (isPlaying) {
+    print(isPlaying);
+    if (isPlaying == true) {
       stopMusic();
-    } else {
+    } else if (isPlaying == false) {
       playRandomMusic();
     }
   }
@@ -639,12 +640,7 @@ class FifthScreen extends StatelessWidget {
                 children: [
                   ElevatedButton(
                     onPressed: () {
-                      // 音楽を再生
-                      if (FigmaToCodeApp().isPlaying) {
-                        FigmaToCodeApp().stopMusic();
-                      } else {
-                        FigmaToCodeApp().playRandomMusic();
-                      }
+                      FigmaToCodeApp().toggleMusic();
                     },
                     style: ElevatedButton.styleFrom(
                       primary: Color.fromARGB(255, 0, 0, 0), // ボタンの背景色を緑色に設定
