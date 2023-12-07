@@ -382,7 +382,7 @@ class FirstScreen extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   ElevatedButton(
-                    onPressed: () async {
+                    onPressed: () {
                       FigmaToCodeApp().toggleMusic();
                     },
                     style: ElevatedButton.styleFrom(
@@ -445,11 +445,7 @@ class SecondScreen extends StatelessWidget {
                 children: [
                   ElevatedButton(
                     onPressed: () {
-                      if (FigmaToCodeApp().isPlaying) {
-                        FigmaToCodeApp().stopMusic();
-                      } else {
-                        FigmaToCodeApp().playRandomMusic();
-                      }
+                      FigmaToCodeApp().toggleMusic();
                     },
                     style: ElevatedButton.styleFrom(
                       primary: Color.fromARGB(255, 0, 0, 0), // ボタンの背景色を緑色に設定
@@ -510,11 +506,7 @@ class ThirdScreen extends StatelessWidget {
                   ElevatedButton(
                     onPressed: () {
                       // 音楽を再生
-                      if (FigmaToCodeApp().isPlaying) {
-                        FigmaToCodeApp().stopMusic();
-                      } else {
-                        FigmaToCodeApp().playRandomMusic();
-                      }
+                      FigmaToCodeApp().toggleMusic();
                     },
                     style: ElevatedButton.styleFrom(
                       primary: Color.fromARGB(255, 0, 0, 0), // ボタンの背景色を緑色に設定
@@ -576,11 +568,7 @@ class FourthScreen extends StatelessWidget {
                   ElevatedButton(
                     onPressed: () {
                       // 音楽を再生
-                      if (FigmaToCodeApp().isPlaying) {
-                        FigmaToCodeApp().stopMusic();
-                      } else {
-                        FigmaToCodeApp().playRandomMusic();
-                      }
+                      FigmaToCodeApp().toggleMusic();
                     },
                     style: ElevatedButton.styleFrom(
                       primary: Color.fromARGB(255, 0, 0, 0), // ボタンの背景色を緑色に設定
