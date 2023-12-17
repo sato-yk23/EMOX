@@ -13,14 +13,14 @@ class FigmaToCodeApp extends StatelessWidget {
   //aaa
   bool isPlaying = false;
   String currentMusicPath = "";
+
+  //HAPPY
   List<String> musicFiles = [
     "assets/happy_2.mp3",
-    "assets/New_Composition_6.mp3",
-    "assets/ANGRY1.mp3",
-    "assets/EMOTION1.mp3",
-    "assets/peace.mp3",
+    "assets/happy-3.mp3",
   ];
 
+//SAD
   List<String> musicFiles2 = [
     "assets/happy_2.mp3",
     "assets/New_Composition_6.mp3",
@@ -29,6 +29,7 @@ class FigmaToCodeApp extends StatelessWidget {
     "assets/peace.mp3",
   ];
 
+//ANGRY
   List<String> musicFiles3 = [
     "assets/happy_2.mp3",
     "assets/New_Composition_6.mp3",
@@ -37,6 +38,7 @@ class FigmaToCodeApp extends StatelessWidget {
     "assets/peace.mp3",
   ];
 
+//EMOTION
   List<String> musicFiles4 = [
     "assets/happy_2.mp3",
     "assets/New_Composition_6.mp3",
@@ -45,6 +47,7 @@ class FigmaToCodeApp extends StatelessWidget {
     "assets/peace.mp3",
   ];
 
+//PEACE
   List<String> musicFiles5 = [
     "assets/happy_2.mp3",
     "assets/New_Composition_6.mp3",
@@ -145,7 +148,7 @@ class Homescreen extends StatelessWidget {
                   width: 370,
                   height: 110,
                   decoration: ShapeDecoration(
-                    color: Color.fromARGB(255, 40, 83, 62),
+                    color: Color.fromARGB(255, 182, 41, 161),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(47),
                     ),
@@ -231,7 +234,7 @@ class Homescreen extends StatelessWidget {
 
               Positioned(
                 left: 230.01,
-                top: 300,
+                top: 270,
                 child: Transform(
                   transform: Matrix4.identity()
                     ..translate(0.0, 0.0)
@@ -357,9 +360,10 @@ class FirstScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+          toolbarHeight: 30.0, // 適切な高さを設定
           title: Text('再生したら止められない!!',
-              style: TextStyle(color: Color.fromARGB(255, 16, 16, 16))),
-          backgroundColor: Color.fromARGB(255, 214, 220, 31)),
+              style: TextStyle(color: Color.fromARGB(255, 255, 255, 255))),
+          backgroundColor: Color.fromARGB(255, 0, 0, 0)),
       body: Center(
         child: Stack(
           children: [
@@ -388,7 +392,7 @@ class FirstScreen extends StatelessWidget {
                     style: ElevatedButton.styleFrom(
                       primary: Color.fromARGB(255, 0, 0, 0), // ボタンの背景色を緑色に設定
                       onPrimary:
-                          Color.fromARGB(255, 255, 255, 255), // ボタンのテキスト色を白色に設定
+                          Color.fromARGB(255, 252, 252, 252), // ボタンのテキスト色を白色に設定
                     ),
                     child: Container(
                       width: 200, // 幅を指定
@@ -418,10 +422,11 @@ class SecondScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+          toolbarHeight: 30.0, // 適切な高さを設定
           title: Text('再生したら止められない!!',
               style:
                   TextStyle(color: const Color.fromARGB(255, 255, 255, 255))),
-          backgroundColor: Color.fromARGB(255, 67, 19, 198)),
+          backgroundColor: Color.fromARGB(255, 0, 0, 0)),
       body: Center(
         child: Stack(
           children: [
@@ -478,10 +483,11 @@ class ThirdScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+          toolbarHeight: 30.0, // 適切な高さを設定
           title: Text('再生したら止められない!!',
               style:
                   TextStyle(color: const Color.fromARGB(255, 255, 255, 255))),
-          backgroundColor: Color.fromARGB(255, 133, 0, 0)),
+          backgroundColor: Color.fromARGB(255, 0, 0, 0)),
       body: Center(
         child: Stack(
           children: [
@@ -540,10 +546,11 @@ class FourthScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+          toolbarHeight: 30.0, // 適切な高さを設定
           title: Text('再生したら止められない！',
               style:
                   TextStyle(color: const Color.fromARGB(255, 255, 255, 255))),
-          backgroundColor: Color.fromARGB(255, 183, 0, 255)),
+          backgroundColor: Color.fromARGB(255, 0, 0, 0)),
       body: Center(
         child: Stack(
           children: [
@@ -602,9 +609,10 @@ class FifthScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+          toolbarHeight: 30.0, // 適切な高さを設定
           title: Text('再生したら止められない！',
-              style: TextStyle(color: Color.fromARGB(255, 0, 0, 0))),
-          backgroundColor: Color.fromARGB(255, 10, 207, 23)),
+              style: TextStyle(color: Color.fromARGB(255, 255, 255, 255))),
+          backgroundColor: Color.fromARGB(255, 0, 0, 0)),
       body: Center(
         child: Stack(
           children: [
