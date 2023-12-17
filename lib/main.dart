@@ -17,7 +17,7 @@ class FigmaToCodeApp extends StatelessWidget {
   //HAPPY
   List<String> musicFiles = [
     "assets/happy_2.mp3",
-    "assets/happy-3.mp3",
+    "assets/happy-2.mp3",
   ];
 
 //SAD
