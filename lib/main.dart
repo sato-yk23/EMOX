@@ -15,51 +15,36 @@ class FigmaToCodeApp extends StatelessWidget {
   String currentMusicPath = "";
 
   //HAPPY
-  List<String> musicFiles = [
+  List<String> musicFiles1 = [
     "assets/happy_2.mp3",
     "assets/happy-2.mp3",
   ];
 
 //SAD
   List<String> musicFiles2 = [
-    "assets/happy_2.mp3",
     "assets/New_Composition_6.mp3",
-    "assets/ANGRY1.mp3",
-    "assets/EMOTION1.mp3",
-    "assets/peace.mp3",
+    "assets/SAD2.mp3",
   ];
 
 //ANGRY
   List<String> musicFiles3 = [
-    "assets/happy_2.mp3",
-    "assets/New_Composition_6.mp3",
     "assets/ANGRY1.mp3",
-    "assets/EMOTION1.mp3",
-    "assets/peace.mp3",
+    "assets/ANGRY2.mp3",
   ];
 
 //EMOTION
-  List<String> musicFiles4 = [
-    "assets/happy_2.mp3",
-    "assets/New_Composition_6.mp3",
-    "assets/ANGRY1.mp3",
-    "assets/EMOTION1.mp3",
-    "assets/peace.mp3",
-  ];
+  List<String> musicFiles4 = ["assets/EMOTION1.mp3", "assets/EMOTION2.mp3"];
 
 //PEACE
   List<String> musicFiles5 = [
-    "assets/happy_2.mp3",
-    "assets/New_Composition_6.mp3",
-    "assets/ANGRY1.mp3",
-    "assets/EMOTION1.mp3",
     "assets/peace.mp3",
+    "assets/peace-2.mp3",
   ];
 
-  void playRandomMusic() async {
+  void playRandomMusic(List<String> musicFiles1) async {
     Random random = Random();
-    int randomIndex = random.nextInt(musicFiles.length);
-    currentMusicPath = musicFiles[randomIndex];
+    int randomIndex = random.nextInt(musicFiles1.length);
+    currentMusicPath = musicFiles1[randomIndex];
     audioPlayer.play(DeviceFileSource(currentMusicPath));
     isPlaying = true;
   }
@@ -69,12 +54,100 @@ class FigmaToCodeApp extends StatelessWidget {
     isPlaying = false;
   }
 
-  void toggleMusic() {
+  void toggleMusic(List<String> musicFiles1) {
     print(isPlaying);
     if (isPlaying == true) {
       stopMusic();
     } else if (isPlaying == false) {
-      playRandomMusic();
+      playRandomMusic(musicFiles1);
+    }
+  }
+
+  void playRandomMusic2(List<String> musicFiles2) async {
+    Random random = Random();
+    int randomIndex = random.nextInt(musicFiles2.length);
+    currentMusicPath = musicFiles2[randomIndex];
+    audioPlayer.play(DeviceFileSource(currentMusicPath));
+    isPlaying = true;
+  }
+
+  void stopMusic2() async {
+    await audioPlayer.stop();
+    isPlaying = false;
+  }
+
+  void toggleMusic2(List<String> musicFiles2) {
+    print(isPlaying);
+    if (isPlaying == true) {
+      stopMusic();
+    } else if (isPlaying == false) {
+      playRandomMusic(musicFiles2);
+    }
+  }
+
+  void playRandomMusic3(List<String> musicFiles3) async {
+    Random random = Random();
+    int randomIndex = random.nextInt(musicFiles3.length);
+    currentMusicPath = musicFiles3[randomIndex];
+    audioPlayer.play(DeviceFileSource(currentMusicPath));
+    isPlaying = true;
+  }
+
+  void stopMusic3() async {
+    await audioPlayer.stop();
+    isPlaying = false;
+  }
+
+  void toggleMusic3(List<String> musicFiles3) {
+    print(isPlaying);
+    if (isPlaying == true) {
+      stopMusic();
+    } else if (isPlaying == false) {
+      playRandomMusic(musicFiles3);
+    }
+  }
+
+  void playRandomMusic4(List<String> musicFiles4) async {
+    Random random = Random();
+    int randomIndex = random.nextInt(musicFiles4.length);
+    currentMusicPath = musicFiles4[randomIndex];
+    audioPlayer.play(DeviceFileSource(currentMusicPath));
+    isPlaying = true;
+  }
+
+  void stopMusic4() async {
+    await audioPlayer.stop();
+    isPlaying = false;
+  }
+
+  void toggleMusic4(List<String> musicFiles4) {
+    print(isPlaying);
+    if (isPlaying == true) {
+      stopMusic();
+    } else if (isPlaying == false) {
+      playRandomMusic(musicFiles4);
+    }
+  }
+
+  void playRandomMusic5(List<String> musicFiles5) async {
+    Random random = Random();
+    int randomIndex = random.nextInt(musicFiles5.length);
+    currentMusicPath = musicFiles5[randomIndex];
+    audioPlayer.play(DeviceFileSource(currentMusicPath));
+    isPlaying = true;
+  }
+
+  void stopMusic5() async {
+    await audioPlayer.stop();
+    isPlaying = false;
+  }
+
+  void toggleMusic5(List<String> musicFiles5) {
+    print(isPlaying);
+    if (isPlaying == true) {
+      stopMusic();
+    } else if (isPlaying == false) {
+      playRandomMusic(musicFiles5);
     }
   }
 
@@ -387,7 +460,8 @@ class FirstScreen extends StatelessWidget {
                 children: [
                   ElevatedButton(
                     onPressed: () {
-                      FigmaToCodeApp().toggleMusic();
+                      FigmaToCodeApp()
+                          .toggleMusic(FigmaToCodeApp().musicFiles1);
                     },
                     style: ElevatedButton.styleFrom(
                       primary: Color.fromARGB(255, 0, 0, 0), // ボタンの背景色を緑色に設定
@@ -450,7 +524,8 @@ class SecondScreen extends StatelessWidget {
                 children: [
                   ElevatedButton(
                     onPressed: () {
-                      FigmaToCodeApp().toggleMusic();
+                      FigmaToCodeApp()
+                          .toggleMusic2(FigmaToCodeApp().musicFiles2);
                     },
                     style: ElevatedButton.styleFrom(
                       primary: Color.fromARGB(255, 0, 0, 0), // ボタンの背景色を緑色に設定
@@ -512,7 +587,8 @@ class ThirdScreen extends StatelessWidget {
                   ElevatedButton(
                     onPressed: () {
                       // 音楽を再生
-                      FigmaToCodeApp().toggleMusic();
+                      FigmaToCodeApp()
+                          .toggleMusic3(FigmaToCodeApp().musicFiles3);
                     },
                     style: ElevatedButton.styleFrom(
                       primary: Color.fromARGB(255, 0, 0, 0), // ボタンの背景色を緑色に設定
@@ -575,7 +651,8 @@ class FourthScreen extends StatelessWidget {
                   ElevatedButton(
                     onPressed: () {
                       // 音楽を再生
-                      FigmaToCodeApp().toggleMusic();
+                      FigmaToCodeApp()
+                          .toggleMusic4(FigmaToCodeApp().musicFiles4);
                     },
                     style: ElevatedButton.styleFrom(
                       primary: Color.fromARGB(255, 0, 0, 0), // ボタンの背景色を緑色に設定
@@ -636,7 +713,8 @@ class FifthScreen extends StatelessWidget {
                 children: [
                   ElevatedButton(
                     onPressed: () {
-                      FigmaToCodeApp().toggleMusic();
+                      FigmaToCodeApp()
+                          .toggleMusic5(FigmaToCodeApp().musicFiles5);
                     },
                     style: ElevatedButton.styleFrom(
                       primary: Color.fromARGB(255, 0, 0, 0), // ボタンの背景色を緑色に設定
