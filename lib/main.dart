@@ -24,16 +24,22 @@ class FigmaToCodeApp extends StatelessWidget {
   List<String> musicFiles2 = [
     "assets/New_Composition_6.mp3",
     "assets/SAD2.mp3",
+    "assets/SAD3.mp3"
   ];
 
 //ANGRY
   List<String> musicFiles3 = [
     "assets/ANGRY1.mp3",
     "assets/ANGRY2.mp3",
+    "assets/ANGRY3.mp3"
   ];
 
 //EMOTION
-  List<String> musicFiles4 = ["assets/EMOTION1.mp3", "assets/EMOTION2.mp3"];
+  List<String> musicFiles4 = [
+    "assets/EMOTION1.mp3",
+    "assets/EMOTION2.mp3",
+    "assets/EMOTIOM3.mp3"
+  ];
 
 //PEACE
   List<String> musicFiles5 = [
